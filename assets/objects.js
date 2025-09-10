@@ -70,3 +70,53 @@ console.log(customer2);
 
 customer.customerCard ();
 
+//2 
+
+const cat = {   
+    name: 'Murka',
+    color: 'black',
+    isMale: false,
+    isFurnitureDemage: true,
+};
+
+for (key in cat) {
+    console.log (`${key}:>>`, cat[key])
+};
+
+//3
+
+function Book (auth, ttl, year, pr, pubHsCity, pubHsName) {
+        function PublicHouse () {
+        this.publHouseCity = pubHsCity;
+        this.pubHouseName = pubHsName;
+    };
+    this.author = auth;
+    this.title = ttl;
+    this.yearOfPublic = year;
+    this.price = pr;
+    this.publHouse = new PublicHouse (pubHsCity, pubHsName);
+};
+
+const bookProto = {};
+
+bookProto.changePrice = function (newPrice) {
+    newPrice = prompt ('input new price');
+        this.price = newPrice;
+};
+
+bookProto.calcAge = function () {
+    return `З часу видання минуло ${2025 - this.yearOfPublic} років`;
+};
+
+Book.prototype = bookProto;
+
+const book1 = new Book ('Стівен Кінг', 'Під куполом', 2009, 540, 'Київ', 'КСД');
+
+console.log(book1);
+
+console.log(book1.calcAge());
+
+book1.changePrice();
+console.log(book1);
+
+
