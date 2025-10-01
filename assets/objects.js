@@ -14,8 +14,8 @@ const customer = {
         return `${this.city}`+', '+`${this.street}`+', '+`${this.houseNumber}`;
         },
     },
-    changeTelNumber (newNumber) {
-        newNumber = String (prompt ('input new number') );
+    changeTelNumber () {
+        const newNumber = String (prompt ('input new number') );
         this.telNumber = newNumber;
     },
     customerCard () {
