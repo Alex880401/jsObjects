@@ -14,8 +14,7 @@ const customer = {
         return `${this.city}`+', '+`${this.street}`+', '+`${this.houseNumber}`;
         },
     },
-    changeTelNumber () {
-        const newNumber = String (prompt ('input new number') );
+    changeTelNumber (newNumber) {
         this.telNumber = newNumber;
     },
     customerCard () {
@@ -51,7 +50,7 @@ console.log(customer);
 const fullAddres = customer.addres.getAddres ();
 console.log(fullAddres);
 
-customer.changeTelNumber ();
+customer.changeTelNumber (12345678);
 console.log(customer);
 
 customer.gender = 'male';
@@ -100,7 +99,6 @@ function Book (auth, ttl, year, pr, pubHsCity, pubHsName) {
 const bookProto = {};
 
 bookProto.changePrice = function (newPrice) {
-    newPrice = prompt ('input new price');
         this.price = newPrice;
 };
 
@@ -116,7 +114,7 @@ console.log(book1);
 
 console.log(book1.calcAge());
 
-book1.changePrice();
+book1.changePrice(600);
 console.log(book1);
 
 
