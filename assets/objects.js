@@ -20,10 +20,10 @@ const customer = {
     },
     customerCard () {
         document.write ('<article style="width: 400px; height: 400px; text-align: center; border: 1px solid black; padding: 10px">');
-        if (this.firstName !== undefined) {
+        if (this.firstName) {
             document.write (`<h2> Ім'я: ${this.firstName}</h2>`)
         };
-        if (this.surName  !== undefined) {
+        if (this.surName) {
             document.write (`<h2> Прізвище: ${this.surName}</h2>`)
         };
         if (this.gender === 'male') {
@@ -33,13 +33,13 @@ const customer = {
             };
         };
         document.write (`<p> КОНТАКТИ: </p>`);
-        if (this.eMail  !== undefined) {
+        if (this.eMail) {
             document.write (`<p> eMail: ${this.eMail}</p>`)
         };
-        if (this.telNumber  !== undefined) {
+        if (this.telNumber) {
             document.write (`<p> Номер телефону: ${this.telNumber}</p>`)
         };
-        if (this.addres !== undefined) {
+        if (this.addres) {
             document.write (`<p> Адреса: ${this.addres.getAddres ()}</p>`)
         };            
         document.write ('</article>');
