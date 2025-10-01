@@ -86,7 +86,7 @@ for (key in cat) {
 //3
 
 function Book (auth, ttl, year, pr, pubHsCity, pubHsName) {
-        function PublicHouse () {
+        function PublicHouse (pubHsCity, pubHsName) {
         this.publHouseCity = pubHsCity;
         this.pubHouseName = pubHsName;
     };
